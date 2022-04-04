@@ -45,6 +45,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_KEY_SECRET }}
           aws-region: ${{ secrets.AWS_REGION }}
       - name: Deploy to S3
-        run: aws s3 sync ./* s3://picota-bucket-frontend-dev --delete
+        run: aws s3 sync ./ s3://picota-bucket-frontend-dev --delete
         working-directory: .
   
