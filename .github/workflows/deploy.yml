@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  build-dev:
     runs-on: ubuntu-latest
     steps:
       - name: Clone repository
@@ -40,7 +40,7 @@ jobs:
       - name: Get artifact
         uses: actions/download-artifact@v1
         with:
-          name: build
+          name: build-dev
       # Set the credentials from repository settings/secrets
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
