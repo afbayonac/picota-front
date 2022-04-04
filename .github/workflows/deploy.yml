@@ -26,10 +26,10 @@ jobs:
       - name: Share artifact inside workflow
         uses: actions/upload-artifact@v1
         with:
-          name: build
+          name: build-dev
           path: build
   
-  deploy:
+  deploy-dev:
     runs-on: ubuntu-latest
     # When application is successfully tested and build has been generated
     # Then we can start with deployment
@@ -50,6 +50,6 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
       # Copy the files from build folder to the S3 bucket
       - name: Deploy to S3
-        run: aws s3 sync . s3://react-github-actions --acl public-read
+        run: aws s3 sync . s3://picota-bucket-frontend-dev --acl public-read
         working-directory: build
   
