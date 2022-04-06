@@ -1,3 +1,13 @@
 .picota {
   text-align: center;
 }
+
+.picota div {
+  height: 100%;
+  width: 100%;
+}
+
+.picota div img {
+  margin-top: 50%;
+  transform: translateY(-80%);
+}

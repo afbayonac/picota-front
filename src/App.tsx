@@ -4,9 +4,9 @@ import './App.css';
 function App() {
   return (
     <div className="picota">
-      <header>
-        Picota
-      </header>
+      <div>
+        <img src="/logo-opt.svg" alt="" />
+      </div>
     </div>
   );
 }
